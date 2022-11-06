@@ -1,7 +1,3 @@
-    .modal {
-        display: block;
-    }
-
     footer {
         position: fixed;
         bottom:0;
@@ -14,7 +10,7 @@
     }
 
     section {
-        padding-top: 180px;
+        padding-top: 30px;
         padding-bottom: 150px;
         /* background: red; */
     }
@@ -33,17 +29,16 @@
     }
 
     #test-one {
-        /* margin-top: 56px; */
         float: left;
         width: 90%;
-        background: red;
+        /* height: 100vh; */
     }
 
     #sia {
         float: right;
         background: #4489F1;
         width: 10%;
-        height: 100%;
+        height: 100vh;
     }
 
     #quest-number {
@@ -52,6 +47,7 @@
         color: #FFF;
         text-align: center;
         margin: auto;
+        margin-top: 130%;
     }
 
     form {
@@ -71,6 +67,12 @@
     }
 
     input.btn-number:hover {
+        color: #FFF;
+        background: #4489F1;
+        padding: 7px 30px;
+    }
+
+    input.btn-selected {
         color: #FFF;
         background: #4489F1;
         padding: 7px 30px;
