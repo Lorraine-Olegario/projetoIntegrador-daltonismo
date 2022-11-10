@@ -37,13 +37,13 @@ if(result.status === true) {
     modal.style.display = "block";
 
     if (result.error === 0)
-        var  resultText = "parabéns, parece que voce não apresentou nenhum grau de daltonismo!";
+        var  resultText = "Parabéns, você não apresentou nenhum grau de daltonismo!";
 
     if (result.error >= 1 && result.error <= 3)
-        var resultText = "Ops!, você errou algumas perguntas, pode ser que você tenha algum tipo de daltonismo.";
+        var resultText = "Ops!, você errou algumas perguntas, pode ser que você tenha algum tipo de daltonismo, em casoso de dúvidas aconselhamos a procura de um profissional (oftalmologista).";
 
     if (result.error >= 4 && result.error <= 6)
-        var resultText = "Atenção, você apresentou uma pontuação de acerto baixo,  aconselhamos a procura de um profissional (oftalmologista).";
+        var resultText = "Atenção, você apresentou uma pontuação de acerto baixo, aconselhamos a procura de um profissional (oftalmologista).";
 
     if (result.error > 6)
         var resultText = "Sua pontuação de erro foi consideravelmente alta, aconselhamos a procura de um profissional (oftalmologista).";
