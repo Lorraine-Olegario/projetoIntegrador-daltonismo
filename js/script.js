@@ -33,16 +33,16 @@ if(result.status === true) {
     modal.style.display = "block";
 
     if (result.error === 0)
-        var resultText = "<span style='color:#007bff'>parabéns</span>, parece que voce não apresentou nenhum grau de daltonismo!";
+        var resultText = "<strong style='color:#007bff'>parabéns</strong>, parece que voce não apresentou nenhum grau de daltonismo!";
 
     if (result.error >= 1 && result.error <= 3)
-        var resultText = "<span style='color:red'>Ops!</span>, você errou algumas perguntas, pode ser que você tenha algum tipo de daltonismo.";
+        var resultText = "<strong style='color:red'>Ops!</strong>, você errou algumas perguntas, pode ser que você tenha algum tipo de daltonismo.";
 
     if (result.error >= 4 && result.error <= 6)
-        var resultText = "<span style='color:red'>Atenção</span>, você apresentou uma pontuação de acerto baixo,  aconselhamos a procura de um profissional (oftalmologista).";
+        var resultText = "<strong style='color:red'>Atenção</strong>, você apresentou uma pontuação de acerto baixo,  aconselhamos a procura de um profissional (oftalmologista).";
 
     if (result.error > 6)
-        var resultText = "<span style='color:red'>Sua pontuação de erro foi consideravelmente alta</span>, aconselhamos a procura de um profissional (oftalmologista).";
+        var resultText = "<strong style='color:red'>Sua pontuação de erro foi consideravelmente alta</strong>, aconselhamos a procura de um profissional (oftalmologista).";
 
 
     document.querySelector('#result-text').innerHTML = resultText;
@@ -51,5 +51,5 @@ if(result.status === true) {
 
 span.onclick = function() {
     modal.style.display = "none";
-    localStorage.removeItem(index)
+    localStorage.clear();
 } 
