@@ -33,7 +33,7 @@ if(result.status === true) {
     modal.style.display = "block";
 
     if (result.error === 0)
-        var resultText = "<strong style='color:#007bff'>Parabéns/strong>, você não apresentou nenhum grau de daltonismo!";
+        var resultText = "<strong style='color:#007bff'>Parabéns</strong>, você não apresentou nenhum grau de daltonismo!";
 
     if (result.error >= 1 && result.error <= 3)
         var resultText = "<strong style='color:red'>Ops!</strong>, você errou algumas perguntas, pode ser que você tenha algum tipo de daltonismo, em casoso de dúvidas aconselhamos a procura de um profissional (oftalmologista).";
