@@ -1,6 +1,4 @@
 var modal = document.getElementById("myModal");
-var btn = document.getElementById("myBtn");
-var span = document.querySelector(".close-modal");
 
 let result = {};
 result.status = true
@@ -36,20 +34,24 @@ if(result.status === true) {
         var resultText = "<strong style='color:#007bff'>parabéns</strong>, parece que voce não apresentou nenhum grau de daltonismo!";
 
     if (result.error >= 1 && result.error <= 3)
-        var resultText = "<strong style='color:red'>Ops!</strong>, você errou algumas perguntas, pode ser que você tenha algum tipo de daltonismo.";
+        var resultText = "<strong style='color:#007bff'>Ops!</strong>, você errou algumas perguntas, pode ser que você tenha algum tipo de daltonismo.";
 
     if (result.error >= 4 && result.error <= 6)
-        var resultText = "<strong style='color:red'>Atenção</strong>, você apresentou uma pontuação de acerto baixo,  aconselhamos a procura de um profissional (oftalmologista).";
+        var resultText = "<strong style='color:#007bff'>Atenção</strong>, você apresentou uma pontuação de acerto baixo,  aconselhamos a procura de um profissional (oftalmologista).";
 
     if (result.error > 6)
-        var resultText = "<strong style='color:red'>Sua pontuação de erro foi consideravelmente alta</strong>, aconselhamos a procura de um profissional (oftalmologista).";
+        var resultText = "<strong style='color:#007bff'>Sua pontuação de acerto foi consideravelmente baixa</strong>, aconselhamos a procura de um profissional (oftalmologista).";
 
 
     document.querySelector('#result-text').innerHTML = resultText;
     document.querySelector('#score').innerHTML = result.hits + '/10';
 }
 
-span.onclick = function() {
+document.querySelector(".close-modal").addEventListener('click', () => {
     modal.style.display = "none";
     localStorage.clear();
-} 
+});
+
+document.querySelector('#start-test').addEventListener('click', () => {
+    localStorage.clear();
+});
